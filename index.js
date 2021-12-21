@@ -5,27 +5,31 @@ const port = 3000
 const User = require('./models/cliente')
 
 app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`)
 })
 
 app.get('/', async(req, res) => {
-    res.sendFile(__dirname + '/view/index.html')
+    const select = await User.findAll()
+})
+
+app.get('/:id', async(req, res) => {
+    const selectId = await User.findByPk(req.params.id)
 })
 
 app.post('/cadastro', async(req, res) => {
-    console.log(req.body)
+    User.create(req.body)
+})
 
-    await User.create(req.body)
-        .then(() => {
-            return res.json({
-                mensagem: 'Usuário cadastrado com sucesso'
-            }).catch(() => {
-                return res.status(400).json({
-                    mensagem: 'Erro ao cadastrar usuário'
-                })
-            })
-        })
+app.put('/editar/:id', async(req, res) => {
+    const editID = await User.findByPk(req.params.id)
+    editID.name = req.body.name
+    editID.save()
+})
 
+app.delete('/delete/:id', async(req, res) => {
+    const deletID = await User.findByPk(req.params.id)
+    deletID.destroy()
 })
