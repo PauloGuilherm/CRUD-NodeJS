@@ -35,7 +35,7 @@
             background-color: rgba(43, 41, 41, 0.877);
         }
     </style>
-    <form action="" method="post">
+    <form action="/cadastro" method="post">
 
         <div class="box">
 
@@ -46,42 +46,42 @@
             <section class="container flex">
 
                 <div class="item flex-item-1">
-                    <input type="text" class="form-control" placeholder="Nome">
+                    <input type="text" class="form-control" placeholder="Nome" name="name">
                 </div>
 
                 <div class="item flex-item-1">
-                    <input type="text" class="form-control" placeholder="Email">
+                    <input type="text" class="form-control" placeholder="Email" name="email">
                 </div>
 
                 <div class="item flex-item-1">
-                    <input type="text" class="form-control" placeholder="Telefone">
+                    <input type="text" class="form-control" placeholder="Telefone" name="telefone">
                 </div>
 
                 <div class="item flex-item-1">
-                    <input type="text" class="form-control" placeholder="Profissão">
+                    <input type="text" class="form-control" placeholder="Profissão" name="profissao">
                 </div>
 
                 <div class="item flex-item-1">
-                    <input type="button" value="Cadastrar" class="form-control btn btn-dark" ">
-            </div>
+                    <input type="submit" class="form-control btn btn-dark" value="cadastrar">
+                </div>
+    </form>
+    </section>
+    <br>
 
-        </section>
-        <br>
-
-        <table class="table table-dark ">
-            <thead>
-                <tr>
-                    <th scope="col ">ID</th>
-                    <th scope="col ">Nome</th>
-                    <th scope="col ">Email</th>
-                    <th scope="col ">Telefone</th>
-                    <th scope="col ">Profissão</th>
-                    <th scope="col ">Ações</th>
-                </tr>
-            </thead>
-        </table>
+    <table class="table table-dark ">
+        <thead>
+            <tr>
+                <th scope="col ">ID</th>
+                <th scope="col ">Nome</th>
+                <th scope="col ">Email</th>
+                <th scope="col ">Telefone</th>
+                <th scope="col ">Profissão</th>
+                <th scope="col ">Ações</th>
+            </tr>
+        </thead>
+    </table>
     </div>
-</form>
+
 </body>
 
 </html>

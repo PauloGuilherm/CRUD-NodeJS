@@ -1,0 +1,10 @@
+POST http://localhost:3000/cadastro
+Content-Type: application/json
+
+{
+    "name": "Paulo",
+    "email": "paulo.guilherme.arruda1@gmail.com",
+    "telefone": "8198301487",
+    "profissao": "desenvolvedor"
+}
+###
