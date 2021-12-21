@@ -1,0 +1,17 @@
+{
+    "name": "crudnode",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "index.js"
+    },
+    "author": "Paulo Guilherme",
+    "license": "ISC",
+    "dependencies": {
+        "bootstrap": "^5.1.3",
+        "express": "^4.17.2",
+        "mysql": "^2.18.1",
+        "nodemon": "^2.0.15"
+    }
+}
