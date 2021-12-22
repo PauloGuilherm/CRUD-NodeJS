@@ -1,11 +1,12 @@
+
 POST http://localhost:3000/cadastro
 Content-Type: application/json
 
 {
-    "name": "Carol",
-    "email": "asdas",
-    "telefone": "asdas",
-    "profissao": "asdas"
+    "name": 2,
+    "email": "caroline@gmail.com",
+    "telefone": "81989447610",
+    "profissao": "eletricista"
 }
 ###
 PUT http://localhost:3000/editar/1
@@ -18,14 +19,14 @@ Content-Type: application/json
     "profissao": "tester"
 }
 ###
-GET http://localhost:3000/1
+GET http://localhost:3000/
 ###
-PUT http://localhost:3000/editar/1 
+PATCH http://localhost:3000/editar/9
 Content-Type: application/json
 
 {
-    "name": "Paulo Guilherme"
+    "email": "paulo.guilherme.arruda1@gmail.com"
 }
 ###
-DELETE http://localhost:3000/delete/8
+DELETE http://localhost:3000/delete/10
 ###
